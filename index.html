@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<head>
+<title>SVG Fighter Jet Icon</title>
+<style>
+
+/******************************************************************
+* FONTS
+*******************************************************************/
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('fonts/BebasNeue-webfont.eot');
+    src: url('fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/BebasNeue-webfont.woff') format('woff'),
+         url('fonts/BebasNeue-webfont.ttf') format('truetype'),
+         url('fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/******************************************************************
+* LAYOUT
+*******************************************************************/
+body { background:#3b7172; }
+#wrapper { width:100%; overflow: hidden; }
+h1 { color: #fff; font-family: Monospace, Helvetica, Arial; margin: 30px auto 0px auto !important; text-align: center; font-size: 52px; }
+
+
+/******************************************************************
+* ICON
+*******************************************************************/
+.icon { display: block; margin: 0px auto; margin-top: -150px;}
+.icon_wrapper { display: block; margin: 0px auto; }
+.icon_wrapper:hover { cursor: pointer;}
+
+.circle {
+    transition: .3s;
+    fill: #345D5E;
+    stroke: #fff;
+    stroke-width: 15px;
+}
+
+.icon_wrapper:hover .circle { 
+    stroke:#fff;
+    stroke-width: 10px;
+}
+
+.fighter_jet {
+    transition: .2s;
+    transform: translateY(10px);
+}
+
+.icon_wrapper:hover .fighter_jet { 
+    transform: translateY(-20px);
+}
+
+.wide_stream { display: none; fill: #976e80; }
+.icon_wrapper:hover .wide_stream { 
+    display: block;
+    animation-name: thruster_boost;
+    animation-duration: .1s;
+    animation-iteration-count: infinite;
+
+}
+
+.tail{  transform: translateY(-10px) translateX(0px);  }
+.icon_wrapper:hover .tail {
+    animation-name: tail_shudder;
+    animation-duration: .2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+/**************************************************
+** CSS Animations                                
+***************************************************/
+@keyframes tail_shudder { 
+    0% { transform: translateY(0px) }
+    100% { transform: translateY(-1px)}
+}
+
+@keyframes vent_shudder { 
+    0% { transform: translateY(0px) }
+    100% { transform: translateY(-1px)}
+}
+
+@keyframes thruster_boost { 
+    0% {
+        fill-opacity: 1;
+        stroke-opacity: 1;
+    }
+
+    70% {
+        fill-opacity: 0.5;
+        stroke-opacity: 0.5;
+    }
+
+    100% {
+        fill-opacity: 0;
+        stroke-opacity: 0;
+    }
+}
+
+</style>
+<body>
+
+<div id="wrapper">
+
+    <h1>SVG Fighter Jet Icon</h1>
+    <svg version="1.1" width="768px" height="1024px" viewBox="0 0 768 1024" class="icon">
+
+    <g class="icon_wrapper">
+        <g id="Booster" class="booster">
+            <g id="White_Tab" class="white_tab">
+                <circle id="Circle" class="circle" cx="427.175" cy="535.825" r="284.175"/>
+                <path class="tab" style="fill:#FFFFFF;" d="M143,535.825c0,30.088,4.692,59.077,13.357,86.294l231.169-367.703
+                    C249.353,273.709,143,392.337,143,535.825z"/>
+                <text transform="matrix(0.5432 -0.8396 0.8396 0.5432 230.4351 482.0635)" style="font-family: 'BebasNeueRegular', Arial; font-size: 26px; letter-spacing: 1px">prototype jet</text>
+                <text transform="matrix(0.5372 -0.8435 0.8435 0.5372 208.9536 468.126)" style="font-family: 'BebasNeueRegular', Arial; font-size: 72px">A-916</text>
+            </g>
+            <g id="Booster_Mask" class="booster_mask">
+                <defs>
+                    <circle id="SVGID_5_" cx="427.175" cy="530.825" r="284.175"/>
+                     <filter id="f1" x="0" y="0">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+                    </filter>
+                </defs>
+                <clipPath id="SVGID_6_">
+                    <use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
+                </clipPath>
+                <g id="Wide_Stream_1_" class="wide_stream" style="clip-path:url(#SVGID_6_);">
+                    <rect x="413" y="700" style="fill:#BDCCD4;" width="37" height="153" />
+                    <rect x="424" y="700" style="fill:#FFFFFF;" width="15" height="153" />
+                </g>
+                <g id="Narrow_Stream" class="narrow_stream" style="clip-path:url(#SVGID_6_);">
+                    <rect x="425" y="1130" style="fill:#BDCCD4;" width="13" height="253"/>
+                    <rect x="428.5" y="701" style="fill:none;stroke:#FFFFFF;stroke-width:3;" width="5" height="253" />
+                </g>
+            </g>
+        </g>
+        <g id="Tail" class="tail" style="opacity:0.8;">
+            <polygon id="Shadow_2" style="fill:#0F0301;" points="604.435,625 584.318,625 540,564.813 540,554.284 487,517.141 487,497 
+                480.441,497 462.295,450.381 457,438.377 457,418.576 433.207,373.142 432.467,371.808 431.672,373.155 408,418.576 408,438.377 
+                402.564,450.381 384.27,497 378,497 378,517.141 325,554.284 325,564.813 280.391,625 260.277,625 240.548,674.064 
+                284.772,703.008 378.804,657.844 394.105,689.06 417.067,703 447.644,703 470.605,689.096 485.915,657.923 579.946,703.161 
+                624.162,674.065"/>
+        </g>
+        <g id="Fighter_Jet" class="fighter_jet">
+            <polygon id="Base_Ship_13_" style="fill:#0F0301;" points="578.257,608.906 561.288,609.033 523.229,541.41 523.139,529.603 
+                478.827,488.281 478.649,464.65 472.569,464.696 456.802,413.056 452.164,400.15 451.997,377.945 431.616,327.146 431.017,325.655 
+                430.471,327.17 410.998,378.253 411.165,400.459 406.581,413.433 391.441,465.307 385.652,465.35 385.83,488.98 342.145,530.963 
+                342.233,542.771 304.904,610.961 287.936,611.089 271.706,666.028 309.255,698.103 388.196,646.808 401.367,681.659 
+                420.854,697.092 446.646,696.898 465.898,681.19 478.553,646.148 558.255,696.292 595.311,663.593  "/>
+
+            <g id="Wing_Art_12_">
+                <defs>
+                    <polygon id="SVGID_7_" points="577.52,599 560.551,599 523,531.093 523,519.284 479,477.631 479,454 472.92,454 457.54,402.242 
+                        453,389.303 453,367.097 433.002,316.146 432.413,314.65 431.856,316.161 412,367.097 412,389.303 407.318,402.242 391.79,454 
+                        386,454 386,477.631 342,519.284 342,531.093 304.159,599 287.191,599 270.548,653.816 307.855,686.172 387.18,635.472 
+                        400.088,670.421 419.459,686 445.252,686 464.622,670.438 477.538,635.492 556.862,686.233 594.162,653.813             "/>
+                </defs>
+                <clipPath id="SVGID_8_">
+                    <use xlink:href="#SVGID_7_"  style="overflow:visible;"/>
+                </clipPath>
+                <ellipse style="clip-path:url(#SVGID_8_);fill:#A00E49;" cx="332.747" cy="469.917" rx="52.747" ry="282.267"/>
+                <ellipse style="clip-path:url(#SVGID_8_);fill:#D91757;" cx="302.045" cy="432.917" rx="66.046" ry="282.267"/>
+                <ellipse style="clip-path:url(#SVGID_8_);fill:#A00E49;" cx="531.747" cy="462.917" rx="52.747" ry="282.267"/>
+                <ellipse style="clip-path:url(#SVGID_8_);fill:#D91757;" cx="562.54" cy="437.917" rx="66.954" ry="282.267"/>
+                <rect x="571" y="238" style="clip-path:url(#SVGID_8_);fill:#0F0301;" width="32" height="429"/>
+                <rect x="260" y="238" style="clip-path:url(#SVGID_8_);fill:#0F0301;" width="34" height="429"/>
+            </g>
+
+            <polygon id="Tail_Base" style="fill:#A00E49;" points="445,571.941 445,637 473,637 469.088,594.383   "/>
+            <polygon id="Tail_Highlight" style="fill:#D91757;" points="469.088,594.383 473,637 460,637.25   "/>
+            <polygon id="Tail_Base_1_" style="fill:#A00E49;" points="420,571.941 420,637 392,637 395.912,594.383    "/>
+            <polygon id="Tail_Highlight_1_" style="fill:#D91757;" points="395.912,594.383 392,637 405,637.25    "/>
+           
+            <g id="Mid_Tail" class="mid_tail">
+                <rect x="420" y="555" style="fill:#D91757;" width="25" height="4"/>
+                <polygon id="Base_Ship_11_" style="fill:#0F0301;" points="504.017,513.009 495.629,513.071 476.816,479.646 476.771,473.81 
+                    454.869,453.385 454.781,441.704 451.775,441.727 443.982,416.202 441.689,409.822 441.607,398.847 431.533,373.737 431.236,373 
+                    430.967,373.749 421.342,398.999 421.424,409.975 419.158,416.388 411.675,442.029 408.813,442.05 408.901,453.73 
+                    387.309,474.482 387.352,480.318 368.9,514.024 360.513,514.088 352.491,541.243 371.051,557.098 410.071,531.743 416.581,548.97 
+                    426.214,556.598 438.963,556.502 448.479,548.738 454.733,531.417 494.129,556.203 512.445,540.04      "/>
+                <g id="Wing_Art_10_">
+                    <defs>
+                        <polygon id="SVGID_11_" points="504.146,538 495.759,538 477,504.203 477,498.367 455,477.778 455,466 452.443,466 
+                            445.042,440.465 443,434.118 443,423.142 432.913,397.957 432.521,397.218 432.031,397.965 422,423.142 422,434.118 
+                            419.852,440.465 412.342,466 409,466 409,477.778 388,498.367 388,504.203 369.026,538 360.639,538 352.413,564.98 
+                            370.854,580.915 410.063,555.826 416.443,573.2 426.019,581 438.768,581 448.342,573.193 454.727,555.864 493.936,580.917 
+                            512.372,564.993                 "/>
+                    </defs>
+                    <clipPath id="SVGID_12_">
+                        <use xlink:href="#SVGID_11_"  style="overflow:visible;"/>
+                    </clipPath>
+                    <ellipse style="clip-path:url(#SVGID_12_);fill:#A00E49;" cx="382.157" cy="473.965" rx="26.072" ry="139.521"/>
+                    <ellipse style="clip-path:url(#SVGID_12_);fill:#D91757;" cx="367.982" cy="455.676" rx="32.646" ry="139.522"/>
+                    <ellipse style="clip-path:url(#SVGID_12_);fill:#A00E49;" cx="481.521" cy="470.505" rx="26.072" ry="139.521"/>
+                    <ellipse style="clip-path:url(#SVGID_12_);fill:#D91757;" cx="496.742" cy="458.147" rx="33.094" ry="139.522"/>
+                    <rect x="501" y="359" style="clip-path:url(#SVGID_12_);fill:#0F0301;" width="16" height="212"/>
+                    <rect x="347" y="359" style="clip-path:url(#SVGID_12_);fill:#0F0301;" width="17" height="212"/>
+                </g>
+                <polygon id="Tail_Right" style="fill:#A00E49;" points="439,524.395 439,557 452.483,557 450.728,535.711      "/>
+                <polygon id="Tail_Right_Highlight" style="fill:#D91757;" points="450.549,535.487 452.483,556.553 446.058,556.676        "/>
+                <polygon id="Tail_Left" style="fill:#A00E49;" points="426,524.395 426,557 412.445,557 414.236,535.711       "/>
+                <polygon id="Tail_Left_Highlight" style="fill:#D91757;" points="414.379,535.487 412.445,556.553 418.871,556.676         "/>
+            </g>
+            <g id="Front_Vents" class="front_vents">
+                
+                <g id="Wing_Art_9_">
+                    <defs>
+                        <polygon id="SVGID_13_" points="505.146,609 496.759,609 478,575.203 478,569.367 456,548.777 456,537 453.443,537 
+                            446.042,511.465 444,505.118 444,494.142 433.913,468.957 433.521,468.219 433.031,468.965 423,494.142 423,505.118 
+                            420.852,511.465 413.342,537 410,537 410,548.777 389,569.367 389,575.203 370.026,609 361.639,609 353.413,635.98 
+                            371.854,651.915 411.063,626.826 417.443,644.2 427.019,652 439.768,652 449.342,644.193 455.727,626.864 494.936,651.917 
+                            513.372,635.993 "/>
+                    </defs>
+                    <clipPath id="SVGID_14_">
+                        <use xlink:href="#SVGID_13_"  style="overflow:visible;"/>
+                    </clipPath>
+                    <ellipse style="clip-path:url(#SVGID_14_);fill:#A00E49;" cx="383.157" cy="730.965" rx="26.072" ry="139.521"/>
+                    <ellipse style="clip-path:url(#SVGID_14_);fill:#D91757;" cx="368.982" cy="712.676" rx="32.646" ry="139.522"/>
+                    <ellipse style="clip-path:url(#SVGID_14_);fill:#A00E49;" cx="482.521" cy="727.505" rx="26.072" ry="139.521"/>
+                    <ellipse style="clip-path:url(#SVGID_14_);fill:#D91757;" cx="497.742" cy="715.147" rx="33.094" ry="139.522"/>
+                    <rect x="502" y="616" style="clip-path:url(#SVGID_14_);fill:#0F0301;" width="16" height="212"/>
+                    <rect x="348" y="616" style="clip-path:url(#SVGID_14_);fill:#0F0301;" width="17" height="212"/>   
+                </g>
+            </g>
+            <g id="Front_Vents_2">
+                <g id="Wing_Art_1_">
+                    <defs>
+                        <polygon id="SVGID_15_" points="505.146,443 496.759,443 478,409.203 478,403.367 456,382.777 456,371 453.443,371 
+                            446.042,345.465 444,339.118 444,328.142 433.913,302.957 433.521,302.219 433.031,302.965 423,328.142 423,339.118 
+                            420.852,345.465 413.342,371 410,371 410,382.777 389,403.367 389,409.203 370.026,443 361.639,443 353.413,469.98 
+                            371.854,485.915 411.063,460.826 417.443,478.2 427.019,486 439.768,486 449.342,478.193 455.727,460.864 494.936,485.917 
+                            513.372,469.993 "/>
+                    </defs>
+                    <clipPath id="SVGID_16_">
+                        <use xlink:href="#SVGID_15_"  style="overflow:visible;"/>
+                    </clipPath>
+                    <ellipse style="clip-path:url(#SVGID_16_);fill:#A00E49;" cx="383.157" cy="564.965" rx="26.072" ry="139.521"/>
+                    <ellipse style="clip-path:url(#SVGID_16_);fill:#D91757;" cx="368.982" cy="546.676" rx="32.646" ry="139.522"/>
+                    <ellipse style="clip-path:url(#SVGID_16_);fill:#A00E49;" cx="482.521" cy="561.505" rx="26.072" ry="139.521"/>
+                    <ellipse style="clip-path:url(#SVGID_16_);fill:#D91757;" cx="497.742" cy="549.147" rx="33.094" ry="139.522"/>
+                    <rect x="502" y="450" style="clip-path:url(#SVGID_16_);fill:#0F0301;" width="16" height="212"/>
+                    <rect x="348" y="450" style="clip-path:url(#SVGID_16_);fill:#0F0301;" width="17" height="212"/>
+                </g>
+            </g>
+            <g id="Rear_Tail">
+                <rect x="420" y="701" style="fill:#D91757;" width="25" height="3"/>
+                <polygon id="Base_Ship_9_" style="fill:#0F0301;" points="509.291,677.081 500.402,677.116 480.467,658.476 480.419,655.221 
+                    457.209,643.83 457.116,637.315 453.932,637.328 445.672,623.094 443.242,619.536 443.155,613.414 432.48,599.411 432.165,599 
+                    431.879,599.418 421.68,613.5 421.767,619.62 419.366,623.197 411.437,637.497 408.403,637.509 408.497,644.022 385.613,655.596 
+                    385.66,658.851 366.108,677.647 357.22,677.684 348.719,692.827 368.386,701.671 409.737,687.529 416.636,697.137 
+                    426.843,701.392 440.354,701.338 450.437,697.009 457.065,687.348 498.813,701.171 518.223,692.156 "/>
+                <g id="Wing_Art_8_">
+                    <defs>
+                        <polygon id="SVGID_17_" points="508.429,692 499.539,692 479,673.171 479,669.916 457,658.433 457,652 453.639,652 
+                            445.979,637.691 444,634.086 444,627.963 433.127,613.919 432.62,613.507 431.865,613.922 421,627.963 421,634.086 
+                            418.912,637.691 411.142,652 408,652 408,658.433 386,669.916 386,673.171 365.241,692 356.353,692 347.635,707.056 
+                            367.177,715.947 408.727,701.958 415.489,711.649 425.636,716 439.146,716 449.292,711.646 456.058,701.982 497.607,715.953 
+                            517.146,707.063 "/>
+                    </defs>
+                    <clipPath id="SVGID_18_">
+                        <use xlink:href="#SVGID_17_"  style="overflow:visible;"/>
+                    </clipPath>
+                    <ellipse style="clip-path:url(#SVGID_18_);fill:#A00E49;" cx="380.217" cy="656.307" rx="27.629" ry="77.812"/>
+                    <ellipse style="clip-path:url(#SVGID_18_);fill:#D91757;" cx="364.134" cy="646.108" rx="34.595" ry="77.81"/>
+                    <ellipse style="clip-path:url(#SVGID_18_);fill:#A00E49;" cx="485.452" cy="654.378" rx="27.628" ry="77.81"/>
+                    <ellipse style="clip-path:url(#SVGID_18_);fill:#D91757;" cx="500.581" cy="647.485" rx="35.07" ry="77.811"/>
+                    <rect x="505" y="593" style="clip-path:url(#SVGID_18_);fill:#0F0301;" width="18" height="117"/>
+                    <rect x="343" y="593" style="clip-path:url(#SVGID_18_);fill:#0F0301;" width="17" height="117"/>
+                    
+                </g>
+                <polygon style="fill:#A00E49;" points="439,684.433 439,703 453.681,703 451.624,690.935      "/>
+                <polygon style="fill:#D91757;" points="451.631,690.618 453.681,702.365 446.872,702.436      "/>
+                <polygon style="fill:#A00E49;" points="426,684.433 426,703 411.252,703 413.342,690.935      "/>
+                <polygon style="fill:#D91757;" points="413.302,690.618 411.252,702.365 418.063,702.436      "/>
+            </g>
+            
+            <polygon id="D_Triangle_Right" style="fill:none;stroke:#FFFFFF;stroke-width:3;" points="536.49,630.5 542,620.957 547.51,630.5 "/>
+            <polygon id="D_Triangle_Left" style="fill:none;stroke:#FFFFFF;stroke-width:3;" points="315.49,630.5 321,620.957 326.51,630.5  "/>
+        </g>
+    </g>
+</svg>
+
+</div><!--/ #wrapper -->
+<script type="text/javascript" src="prefixfree.min.js"></script>
+</body>
+</html>
